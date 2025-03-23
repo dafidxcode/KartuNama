@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korimart Business Card Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Korimart Business Card Designer</h1>
+        
+        <div class="editor-container">
+            <div class="card-preview" id="card-preview">
+                <div class="card-front">
+                    <div class="logo-container">
+                        <img id="logo-img" src="logo.png" alt="Korimart Logo">
+                    </div>
+                    <div class="business-name" contenteditable="true">KORIMART</div>
+                    <div class="tagline" contenteditable="true">Minimarket Keluarga</div>
+                    <div class="hours" contenteditable="true">Buka Setiap Hari: 06:00 - 22:00 WIB</div>
+                    <div class="contact-info">
+                        <div class="address" contenteditable="true">Jl. Contoh No. 123, Kota</div>
+                        <div class="phone" contenteditable="true">+62 812 3456 7890</div>
+                    </div>
+                    <div class="social-icons">
+                        <div class="social-icon"><i class="fab fa-tiktok"></i> <span contenteditable="true">@korimart</span></div>
+                        <div class="social-icon"><i class="fab fa-instagram"></i> <span contenteditable="true">@korimart</span></div>
+                        <div class="social-icon"><i class="fab fa-whatsapp"></i> <span contenteditable="true">+62 812 3456 7890</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="editor-controls">
+                <h2>Edit Business Card</h2>
+                
+                <div class="control-group">
+                    <label>Upload Logo:</label>
+                    <input type="file" id="logo-upload" accept="image/*">
+                </div>
+                
+                <div class="control-group">
+                    <label>Background Color:</label>
+                    <input type="color" id="bg-color" value="#ffffff">
+                </div>
+                
+                <div class="control-group">
+                    <label>Text Color:</label>
+                    <input type="color" id="text-color" value="#e60000">
+                </div>
+                
+                <div class="control-group">
+                    <label>Accent Color:</label>
+                    <input type="color" id="accent-color" value="#e60000">
+                </div>
+                
+                <div class="control-group">
+                    <label>Font Size:</label>
+                    <select id="font-size">
+                        <option value="small">Small</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <button id="download-btn">Download Business Card</button>
+                </div>
+                
+                <div class="instructions">
+                    <p><strong>Instructions:</strong></p>
+                    <p>- Click on any text to edit it directly</p>
+                    <p>- Use the controls to customize colors and logo</p>
+                    <p>- Click Download when you're satisfied with the design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+  </html>
+  
