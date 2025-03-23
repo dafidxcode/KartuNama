@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e60000;
+}
+
+.editor-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card-preview {
+    width: 350px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card-front {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid #e60000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#logo-img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.business-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e60000;
+    margin-bottom: 2px;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.hours {
+    font-size: 11px;
+    color: #e60000;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.contact-info {
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 11px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-icon i {
+    color: #e60000;
+    font-size: 12px;
+}
+
+.editor-controls {
+    width: 350px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.editor-controls h2 {
+    margin-bottom: 20px;
+    color: #e60000;
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="color"], 
+input[type="file"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+[contenteditable="true"]:focus {
+    outline: 2px dashed #e60000;
+    padding: 2px;
+}
+
+.instructions {
+    margin-top: 20px;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.instructions p {
+    margin-bottom: 5px;
+}
+
+/* Font size variations */
+.font-small .business-name { font-size: 20px; }
+.font-small .tagline { font-size: 10px; }
+.font-small .hours, .font-small .contact-info, .font-small .social-icons { font-size: 9px; }
+
+.font-large .business-name { font-size: 28px; }
+.font-large .tagline { font-size: 14px; }
+.font-large .hours, .font-large .contact-info, .font-large .social-icons { font-size: 13px; }
+
+@media (max-width: 768px) {
+    .editor-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-preview, .editor-controls {
+        width: 100%;
+        max-width: 350px;
+    }
+}
